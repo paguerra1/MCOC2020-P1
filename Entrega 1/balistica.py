@@ -9,7 +9,7 @@ Created on Mon Aug 24 10:25:10 2020
 import scipy as sp
 from scipy.integrate import odeint
 
-# Parametros base=
+# Parametros base:
 g= 9.81  # m/s**2
 cm=0.01
 inch=2.54*cm
@@ -91,10 +91,7 @@ plt.ylabel("Y (m)")
 plt.xlabel("X (m)")
 plt.grid()
 plt.legend()
-
 plt.tight_layout() 
-# plt.savefig('Trayectoria para distintos vientos.png')
-
 plt.savefig("Trayectoria para distintos vientos.png")
 
 
