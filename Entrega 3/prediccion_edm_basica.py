@@ -4,18 +4,14 @@ Created on Fri Aug 28 15:39:37 2020
 
 @author: pauli
 """
-
 import math
 import numpy as np
 import scipy as sp
 from scipy.integrate import odeint
-
 # -----------------------------------------------
 # Entrega 3: Predicción de vector de estado 
 # de la EDM básica
 # ------------------------------------------
-
-
 #  DATOS INCIALES:
 hora= 3600 # seg
 km= 1000 #m
@@ -30,7 +26,6 @@ radio= 6371*km #km
 G=(6.67408*(10**-11))# m3/s2kg
 # Velocidad angular de la rotación de la tierra
 om =(7.2921*(10**-5))# rad/s
-
 FdMax= (G*mt)/radio**2
 
 # Vector de estado:
@@ -74,8 +69,6 @@ def satelite(z,t):
     zp[3:6]=Z2p  
     return zp
 
-
-
 import datetime as dt
 utc_EOF_format=   "%Y-%m-%dT%H:%M:%S.%f"
 t1= dt.datetime.strptime ("2020-07-31T22:59:42.000000",utc_EOF_format)
@@ -86,12 +79,10 @@ intervalo_en_segundos= intervalo.total_seconds()
 print (f"Iintervalo = {intervalo} s")
 print (f"Intervalo_en_segundos = {intervalo_en_segundos} s")
 
-
 # Parámetros iniciales:
 x_i= -294271.795997
 y_i= -2511619.758656
 z_i= 6598339.200344
-
 vx_i= -2401.659901
 vy_i= 6760.253877
 vz_i= 2460.740181
@@ -100,7 +91,6 @@ vz_i= 2460.740181
 x_f= -1753088.623736
 y_f= -6852318.248084
 z_f= -241271.374219
-
 vx_f= -1594.856888
 vy_f= 155.635645
 vz_f= 7426.026842
