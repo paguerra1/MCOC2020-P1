@@ -11,4 +11,6 @@
 * ¿Como encontró vt?
   * Se observó que para velocidad mayores como 100.000 m/s o menores como 1.000 m/s el satélite caía hacia la atmósfera.
 De este modo, se probaron para diversas velocidades, llegando a la conclucion que cercano a los 24.000 m/s, o  un poco inferior a este, el satélite no caía, hasta 23.000 m/s.
-![Trayectoria de satélite](https://user-images.githubusercontent.com/69210578/91517252-5de46900-e8bb-11ea-89fc-533a3fff4cd6.png)
+
+
+* ![Trayectoria de satélite](https://user-images.githubusercontent.com/69210578/91517252-5de46900-e8bb-11ea-89fc-533a3fff4cd6.png)
