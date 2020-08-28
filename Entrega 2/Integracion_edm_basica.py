@@ -85,7 +85,7 @@ t = sp.linspace(0,hora*8 ,(hora*8)+1)
 
 # Velocidad:
 
-vi = (22900*1000)/hora
+vi = (23000*1000)/hora
 
 # Coordenadas iniciales:[xi=radio_m+d,yi=0,z0=0,vx=0,vy=vi,vz=0].
 z0 = sp.array([radio_m+d ,0,0,0,vi,0])
@@ -168,6 +168,7 @@ plt.plot(xx1,yy1, color="cyan")
 plt.xlabel("X")
 plt.ylabel("Y")
 plt.plot(x,y)
+plt.gca().set_aspect("equal")
 plt.title("Trayetoria del satélite")
 plt.tight_layout()
 plt.show()
