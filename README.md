@@ -22,9 +22,8 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 * donde p= (1-chi^2)^0.5
 * Se observa que para las soluciones de Euler, con subdivisiones de 10 y 100 tienen un comportamiento mas preciso y similar a la solución real. El caso de subdvision=1 pierde precisión, como se muestra en el primer gráfico para ```linspace(0,4.,100) ``` (Gráfico pedido para entrega 4).
 
-![linspace(0,4 ,100)](https://user-images.githubusercontent.com/69210578/91866195-3f29fd80-ec40-11ea-81dd-c3301a46ca65.png)
+![Grafico_entrega4](https://user-images.githubusercontent.com/69210578/91870194-bf526200-ec44-11ea-9457-a38d91a37073.png)
 
 * Luego, a modo de comparación se grafica el caso de 1000 números en vez de solo 100, con ```linspace(0,4.,1000) ```  y se observa que para la solucion de Euler con 1 subdivisión reflejaría mayor precisión que para el caso pedido.
 
-![grafico2linspace(0,4 ,1000)](https://user-images.githubusercontent.com/69210578/91866198-3fc29400-ec40-11ea-88e7-692978a0eeb7.png)
-
+![linspace(0,4 ,1000)](https://user-images.githubusercontent.com/69210578/91870228-c8433380-ec44-11ea-95de-624141c1ef9f.png)
