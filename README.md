@@ -15,3 +15,6 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 * ![Trayectoria del_satelite](https://user-images.githubusercontent.com/69210578/91518124-748bbf80-e8bd-11ea-91fb-d8f4561cd1fe.png)
 
 
+# Entrega 4:
+
+![Grafico_entrega4](https://user-images.githubusercontent.com/69210578/91785998-9e522880-ebd4-11ea-9966-5a89606652ed.png)
