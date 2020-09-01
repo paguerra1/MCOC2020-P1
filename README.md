@@ -20,7 +20,7 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 * El gráfico presenta la solución de la ecuación diferencial del oscilador armónico. Fueron presentadas la solucion analítica, odeint, y eulerint para 1, 10 y 100 subdivisiones.   
 * Para la solución real se utilizó la fórmula:  ``` z_real = np.exp((-c/(2*m))*t)*(m*np.cos(om*p*t) + ((1 + om*chi*m)/(om*(p)))*np.sin(om*p*t)) ``` 
 * donde p= (1-chi^2)^0.5
-* Se observa que para las soluciones de Euler, con subdivisiones de 10 y 100 tienen un comportamiento mas preciso y similar a la solución real. El caso de subdvision=1 pierde presición, como se muestra en el primer gráfico (Gráfico pedido para entrega 4).
+* Se observa que para las soluciones de Euler, con subdivisiones de 10 y 100 tienen un comportamiento mas preciso y similar a la solución real. El caso de subdvision=1 pierde presición, como se muestra en el primer gráfico para ```linspace(0,4.,100) ``` (Gráfico pedido para entrega 4).
 ![linspace(0,4 ,100)](https://user-images.githubusercontent.com/69210578/91866195-3f29fd80-ec40-11ea-81dd-c3301a46ca65.png)
 
 * Luego, a modo de comparación se grafica el caso de 1000 números en vez de solo 100, con ```linspace(0,4.,1000) ```  y se observa que para la solucion de Euler con 1 subdivisión reflejaría mayor precisión que para el caso pedido.
