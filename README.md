@@ -43,8 +43,11 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
     * Odeint tarda 0.108 segundos, mientras que Eulerint 0.336 segundos.
 
 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
+
  ![PREGUNTA3_Nsub5000](https://user-images.githubusercontent.com/69210578/92347230-ceeb0400-f0a5-11ea-912f-cf0e8626445a.png)
- 
+ ![Preg3_Deriva_Eulerint_Nsub=5000](https://user-images.githubusercontent.com/69210578/92347896-ba0f7000-f0a7-11ea-8acb-4f849db667e8.png)
+
+
    * Se realizaron Nsubdivisiones= 5000 Con esto el error fue menor al 1% No se continuo probando para otras subdivisiones ya que el tiempo de ejecución fue bastante. El tiempo de ejecución de Eulerint para este caso fue de: 2374.32 seg  y de Odeint 0.11 seg.
    * La deriva de Eulerint vs Odeint fue -226 km como se logra apreciar en el gráfico.
  
