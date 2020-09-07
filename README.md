@@ -27,3 +27,6 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 * Luego, a modo de comparación se grafica el caso de 1000 números en vez de solo 100, con ```linspace(0,4.,1000) ```  y se observa que para la solucion de Euler con 1 subdivisión reflejaría mayor precisión que para el caso pedido.
 
 ![linspace(0,4 ,1000)](https://user-images.githubusercontent.com/69210578/91870228-c8433380-ec44-11ea-95de-624141c1ef9f.png)
+
+
+# Entrega 5:
