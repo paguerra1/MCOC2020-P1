@@ -45,15 +45,18 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
  ![PREGUNTA3_Nsub5000](https://user-images.githubusercontent.com/69210578/92347230-ceeb0400-f0a5-11ea-912f-cf0e8626445a.png)
  
-   * Se realizaron Nsubdivisiones= 5000 Con esto el error fue de 0% . El tiempo de ejecución de Eulerint para este caso fue de: 2374.32 seg  y de Odeint 0.11 seg.
+   * Se realizaron Nsubdivisiones= 5000 Con esto el error fue menor al 1% No se continuo probando para otras subdivisiones ya que el tiempo de ejecución fue bastante. El tiempo de ejecución de Eulerint para este caso fue de: 2374.32 seg  y de Odeint 0.11 seg.
    * La deriva de Eulerint vs Odeint fue -226 km como se logra apreciar en el gráfico.
  
 
 4. Se implementaron las correciones J2 Y J3. 
+
   ![Preg4_Posición_correción J2 y J3](https://user-images.githubusercontent.com/69210578/92346782-356f2280-f0a4-11ea-9c2e-c9433fdc357a.png)
   * Correción J2:
+  
 ![Preg4J2_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92347067-2a68c200-f0a5-11ea-9888-83744243e1fd.png)
 * Correción J2 y J3:
+
 ![Preg4_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92347072-2c328580-f0a5-11ea-9e04-3725c0c58108.png)
 
   * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
