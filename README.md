@@ -38,22 +38,27 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 ![Preg2_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92346657-c5609c80-f0a3-11ea-9d2a-6098c987679e.png) 
 
   * ¿Cuánto deriva Eulerint de odeint en este caso al final del tiempo?
-    *  Se notan las diferencias, Eulerint tarda mas tiempo en realizar el trabajo, derivan en 19 mil Km aprox.
+    *  Se notan las diferencias, Eulerint tarda mas tiempo en realizar el trabajo, derivan en 17mil Km aprox.
   * ¿ Cuánto se demora Odeint y Eulerint respectivamente en producir los resultados?
-    * Odeint tarda 0.2 segundos, mientras que Eulerint 0.59
+    * Odeint tarda 0.108 segundos, mientras que Eulerint 0.336 segundos.
 
 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
-    * Se realizaron Nsubdivisiones= 5000, ya que el tiempo de ejecución era bastante. Con esto el error fue de XXXX% . El tiempo de ejecución de Eulerint para este caso fue de:
+ ![PREGUNTA3_Nsub5000](https://user-images.githubusercontent.com/69210578/92347230-ceeb0400-f0a5-11ea-912f-cf0e8626445a.png)
  
-
-
+   * Se realizaron Nsubdivisiones= 5000 Con esto el error fue de 0% . El tiempo de ejecución de Eulerint para este caso fue de: 2374.32 seg  y de Odeint 0.11 seg.
+   * La deriva de Eulerint vs Odeint fue -226 km como se logra apreciar en el gráfico.
+ 
 
 4. Se implementaron las correciones J2 Y J3. 
   ![Preg4_Posición_correción J2 y J3](https://user-images.githubusercontent.com/69210578/92346782-356f2280-f0a4-11ea-9c2e-c9433fdc357a.png)
+  * Correción J2:
+![Preg4J2_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92347067-2a68c200-f0a5-11ea-9888-83744243e1fd.png)
+* Correción J2 y J3:
+![Preg4_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92347072-2c328580-f0a5-11ea-9e04-3725c0c58108.png)
 
   * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
-    * Las mejoras al implementar las correciones J2 y J3 son notorias, resaltando el gráfico de posición donde la orbita real (línea azul) es semejante a la redicha (naranja). Además del gráfico de la distancia entre la posición real y predicha (odeint)  esta es de: 
-    * El código se demora:  en correr.
+    * Las mejoras al implementar las correciones J2 y J3 son notorias, resaltando el gráfico de posición donde la orbita real (línea azul) es semejante a la redicha (naranja). Además del gráfico de la distancia entre la posición real y predicha (odeint)  esta es de: 3km
+    * El código se demora menos de 1 segundo en correr. Tiempor Odeint: 0.39 seg, Tiempo Eulerint: 0.73seg
 
 
 
