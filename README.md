@@ -35,14 +35,18 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 * 2. Se realizó una comparación de las coluciones Odeint y Eurelint para Nsubdivisiones=1:
   *
   * ¿Cuánto deriva Eulerint de odeint en este caso al final del tiempo?
-  *
+  *  Se notan las diferencias, Eulerint tarda mas tiempo en realizar el trabajo, derivan en 19 mil Km aprox.
   * ¿ Cuánto se demora Odeint y Eulerint respectivamente en producir los resultados?
+  * Odeint tarda 0.2 segundos, mientras que Eulerint 0.59
 
 * 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
-  *
+  * Se realizaron Nsubdivisiones= 5000, ya que el tiempo de ejecución era bastante. Con esto el error fue de XXXX% . El tiempo de ejecución de Eulerint para este caso fue de:
+  
 * 4. Se implementaron las correciones J2 Y J3. 
   *
   * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
+  * Las mejoras al implementar las correciones J2 y J3 son notorias, resaltando el gráfico de posición donde la orbita real (línea azul) es semejante a la redicha (naranja). Además del gráfico de la distancia entre la posición real y predicha (odeint)  esta es de: 
+  * El código se demora:  en correr.
 
 
 
