@@ -31,9 +31,12 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 
 # Entrega 5:
 1. Se graficó la posición (x,y,z) en el tiempo del vector estado del Sentinel 1A/B correspondiente.
-  
+  ![Preg1_Posición](https://user-images.githubusercontent.com/69210578/92346643-bbd73480-f0a3-11ea-8369-d08ef5d1a811.png)
 2. Se realizó una comparación de las coluciones Odeint y Eurelint para Nsubdivisiones=1:
-  
+![Preg2_Deriva_EulerintVSOdeint](https://user-images.githubusercontent.com/69210578/92346654-c2fe4280-f0a3-11ea-83b1-17aaa70540ea.png)
+  ![Preg2_Deriva_Eulerint](https://user-images.githubusercontent.com/69210578/92346650-c1cd1580-f0a3-11ea-8815-ccab743cdefd.png)
+![Preg2_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92346657-c5609c80-f0a3-11ea-9d2a-6098c987679e.png) 
+
   * ¿Cuánto deriva Eulerint de odeint en este caso al final del tiempo?
     *  Se notan las diferencias, Eulerint tarda mas tiempo en realizar el trabajo, derivan en 19 mil Km aprox.
   * ¿ Cuánto se demora Odeint y Eulerint respectivamente en producir los resultados?
@@ -41,7 +44,10 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 
 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
     * Se realizaron Nsubdivisiones= 5000, ya que el tiempo de ejecución era bastante. Con esto el error fue de XXXX% . El tiempo de ejecución de Eulerint para este caso fue de:
-  
+ 
+
+
+
 4. Se implementaron las correciones J2 Y J3. 
   
   * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
