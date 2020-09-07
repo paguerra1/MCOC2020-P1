@@ -49,7 +49,8 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 
 
 4. Se implementaron las correciones J2 Y J3. 
-  
+  ![Preg4_Posición_correción J2 y J3](https://user-images.githubusercontent.com/69210578/92346782-356f2280-f0a4-11ea-9c2e-c9433fdc357a.png)
+
   * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
     * Las mejoras al implementar las correciones J2 y J3 son notorias, resaltando el gráfico de posición donde la orbita real (línea azul) es semejante a la redicha (naranja). Además del gráfico de la distancia entre la posición real y predicha (odeint)  esta es de: 
     * El código se demora:  en correr.
