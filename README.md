@@ -30,19 +30,19 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 
 
 # Entrega 5:
-* 1) Se graficó la posición (x,y,z) en el tiempo del vector estado del Sentinel 1A/B correspondiente.
-*
-* 2) Se realizó una comparación de las coluciones Odeint y Eurelint para Nsubdivisiones=1:
-*
-* ¿Cuánto deriva Eulerint de odeint en este caso al final del tiempo?
-*
-* ¿ Cuánto se demora Odeint y Eulerint respectivamente en producir los resultados?
+* 1. Se graficó la posición (x,y,z) en el tiempo del vector estado del Sentinel 1A/B correspondiente.
+  *
+* 2. Se realizó una comparación de las coluciones Odeint y Eurelint para Nsubdivisiones=1:
+  *
+  * ¿Cuánto deriva Eulerint de odeint en este caso al final del tiempo?
+  *
+  * ¿ Cuánto se demora Odeint y Eulerint respectivamente en producir los resultados?
 
-* 3) ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
-*
-* 4) Se implementaron las correciones J2 Y J3. 
-*
-* ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
+* 3. ¿ Cuantas subdivisiones hay que usar para que la predicción con eulerint al final del tiempo esté en menos de un 1% de error? (Comentar tiempo de ejecución de eulerint)
+  *
+* 4. Se implementaron las correciones J2 Y J3. 
+  *
+  * ¿Cuanta deriva incurre al agregar las correciones J2 y J3? ¿Cuánto se demora su código en correr?
 
 
 
