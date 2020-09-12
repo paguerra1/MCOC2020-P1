@@ -75,3 +75,6 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 ![Distancia_odVSeu_CorreciónFinal](https://user-images.githubusercontent.com/69210578/92982369-3c1ae280-f474-11ea-801a-a6f5cf640656.png)
 ![Final_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92982377-3fae6980-f474-11ea-92f4-866cfb4e7daa.png)
 
+* Cuando se le aplica la correción J2 llega a una distancia odeint de 5.8 [Km] como se observa en las entregas anteriores, ahora se aplicó hasta el J8, obteniendo una distancia de 4.0 [km] Si bien la diferencia no es tan grande, significa una clara ventaja utilizar estas correcciones.
+* Además el gráfico de posición no se ve perjudicado de ninguna forma con estas correcciones, al contrario, es bastante mas preciso.
+* El código demora menos de 5segundos en correr. pero aumentando los tiempos de las funciones explicado por el aumento de correciones. Tiempo Odeint: 0.99 seg , Tiempo Eulerint: 3.53
