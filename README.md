@@ -68,4 +68,10 @@ De este modo, se probaron para diversas velocidades, llegando a la conclucion qu
 
 
 
+# Entrega Final
+* Para esta entrega se agregaron 8 términos utilizando el código presentado por el profesor.
+* El resultado se puede ver a continuación para los gráficos de la posición,  y la distancia entre la predicha y odeint: 
+![Posición_CorrecionFINAL](https://user-images.githubusercontent.com/69210578/92982367-37eec500-f474-11ea-9a4f-cf7348c85b28.png)
+![Distancia_odVSeu_CorreciónFinal](https://user-images.githubusercontent.com/69210578/92982369-3c1ae280-f474-11ea-801a-a6f5cf640656.png)
+![Final_Deriva_Odeint](https://user-images.githubusercontent.com/69210578/92982377-3fae6980-f474-11ea-92f4-866cfb4e7daa.png)
 
