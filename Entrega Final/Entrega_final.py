@@ -6,6 +6,8 @@ Created on Fri Sep 11 19:30:17 2020
 """
 
 # ENTREGA FINAL!!!
+# Esta NOOO es la entrega del concurso, fue realizada para ver los cambios en gráficos y comentar diferencias en Readme
+# Diferencias entre implementar correcciones J2 y J3 e implementar las correcciones de J2 a J8
 
 from scipy.integrate import odeint
 from time import perf_counter
@@ -14,14 +16,9 @@ from matplotlib import pyplot as plt
 import math
 import numpy as np
 
-
-
 # fname= argv[1]
-
 # t, x, y, z, vx, vy, vz =  leer_eof(fname)
-
 # fname_out = fname.replace(".EOF", ".PRED")
-
 archivo = leer_eof("S1A_OPER_AUX_POEORB_OPOD_20200821T121202_V20200731T225942_20200802T005942.EOF")
 
 tiempo = archivo[0]
@@ -34,7 +31,6 @@ vz = archivo[6]
 
 z0 = [x[0],y[0],z[0],vx[0],vy[0],vz[0]]
 zf = [x[-1],y[-1],z[-1],vx[-1],vy[-1],vz[-1]]
-
 
 #  DATOS INCIALES:
 mt=(5.972*(10**24)) #masa de la tierra: kg
@@ -49,12 +45,9 @@ mu = 398600.440*(1000.)**3 #G*Mtierra
 # Se utiliza la mismas funciones "satelite" y "eulerint" utilizada en entregas pasadas:
 
 
-
-
 # Se aplicará el mismo código utilizado por el profesor 
 #Que permite obtener los coeficientes hasta  n = m = 8 de la expansión en armónicos esféricos del geopotencial terrestre
 # Solo se aplicaron esta cantidad de términos
-
 
 #Terminos zonales  ("Jn"), son los C[n,0], notar que S[n,0] = 0
 
@@ -110,7 +103,6 @@ C[8,7], S[8,7] =    0.34297618184624E-12   ,     0.38147656686685E-12
 C[8,8], S[8,8] =   -0.15803322891725E-12   ,     0.15353381397148E-12
 
 # Se define cada uno de los "J" con los parámetros mencionados anteriormente:
-
 J2 = -C[2,0]*mu*Rt**2
 J3 = -C[3,0]*mu*Rt**3
 J4 = -C[4,0]*mu*Rt**4
@@ -118,9 +110,6 @@ J5 = -C[5,0]*mu*Rt**5
 J6 = -C[6,0]*mu*Rt**6
 J7 = -C[7,0]*mu*Rt**7
 J8 = -C[8,0]*mu*Rt**8
-
-
-
 
 def satelite(z,t): 
     zp = np.zeros(6)
@@ -139,7 +128,6 @@ def satelite(z,t):
     z1=z[0:3]
     r = math.sqrt(np.dot(z1,z1))
     
-       
     # El lado derecho de la ecuacion queda:
     lado_derecho1=np.dot(((-mu)/r**2),z1)
     lado=-(mu)/r**2 * R@z1/r
@@ -163,7 +151,6 @@ def satelite(z,t):
     FJ3[2] = J3/r**9 * (4*zz2 *(zz2 - 3*(zz0 + zz1)) +1.5*(zz0 + zz1)**2) 
     
    # Se incluyen correcciones desde el J4 al J7:
-    
     FJ4 = np.zeros(3)
     FJ4[0] = -5*xx[0]*(35*xx[2]**4/(8*(zz0 + zz1 + zz2)**2) - 15*zz2/(4*(zz0+ zz1 + zz2)) + 0.375)/(zz0 + zz1 + zz2)**(7/2) + (-35*xx[0]*xx[2]**4/(2*(zz0 + zz1 + zz2)**3) + 15*xx[0]*zz2/(2*(zz0 + zz1 + zz2)**2))/(zz0 + zz1+ zz2)**(5/2)
     FJ4[1] = -5*xx[1]*(35*xx[2]**4/(8*(zz0 + zz1 + zz2)**2) - 15*zz2/(4*(zz0 + zz1 + zz2)) + 0.375)/(zz0 + zz1 + zz2)**(7/2) + (-35*xx[1]*xx[2]**4/(2*(zz0 + zz1 + zz2)**3) + 15*xx[1]*zz2/(2*(zz0 + zz1 + zz2)**2))/(zz0 + zz1 + zz2)**(5/2)
@@ -186,39 +173,30 @@ def satelite(z,t):
     FJ7[2] = -8*xx[2]*(429*xx[2]**7/(16*(zz0 + zz1 + zz2)**(7/2)) - 693*xx[2]**5/(16*(zz0 + zz1 + zz2)**(5/2)) + 315*xx[2]**3/(16*(zz0 + zz1 + zz2)**(3/2)) - 35*xx[2]/(16*math.sqrt(zz0 +zz1  + zz2)))/(zz0 + zz1 + zz2)**5 + (-3003*xx[2]**8/(16*(zz0 + zz1 + zz2)**(9/2)) + 1617*xx[2]**6/(4*(zz0 + zz1 + zz2)**(7/2)) - 2205*xx[2]**4/(8*(zz0 + zz1 + zz2)**(5/2)) + 245*zz2/(4*(zz0 + zz1 + zz2)**(3/2)) - 35/(16*math.sqrt(zz0 + zz1 + zz2)))/(zz0 + zz1 + zz2)**4
      
     zp = np.zeros(6)
-    zp[0:3]=z2
-        
+    zp[0:3]=z 
     zp[3:6] = R.T@(lado+ FJ2 + FJ3 + J4*FJ4 + J5*FJ5 + J6*FJ6 + J7*FJ7 - (2*Rp@z2+R2p@z1)) 
-    
     return zp
 
+# Función utilizada SOLO para ver diferencias con las entregas anteriores
 def eulerint(zp, z0, t, Nsubdivisiones=1):
     Nt = len(t)
     Ndim = len(np.array(z0))
     z = np.zeros((Nt,Ndim))
-    z[0,:] = z0
-    
-    for i in range(1, Nt):
-    
-        t_anterior = t[i-1]
-        
-        dt = (t[i] - t[i-1])/Nsubdivisiones
-        
-        z_temp = z[i-1, :].copy()
-        
+    z[0,:] = z0    
+    for i in range(1, Nt):    
+        t_anterior = t[i-1]        
+        dt = (t[i] - t[i-1])/Nsubdivisiones        
+        z_temp = z[i-1, :].copy()        
         for k in range(Nsubdivisiones):
-            z_temp += dt*zp(z_temp , t_anterior + k*dt)
-            
+            z_temp += dt*zp(z_temp , t_anterior + k*dt)            
         z[i,:] = z_temp  
     return z
 
 delta = tiempo[-1]
 t = np.linspace(0, delta, len(tiempo))
 t1=perf_counter()
-
 sol_odeint= odeint(satelite,z0,t)
 t2=perf_counter()
-
 sol_eulerint = eulerint(satelite,z0,t,1)
 t3=perf_counter()
 
@@ -231,7 +209,6 @@ z_od = sol_odeint[:,2]
 vx_od = sol_odeint[:,3]
 vy_od = sol_odeint[:,4]
 vz_od = sol_odeint[:,5]
-
 
 print (f"tiempo odeint = {tiempo_odeint} s")
 print (f"tiempo eulerint = {tiempo_euler} s")
@@ -267,7 +244,6 @@ plt.savefig("Posición_CorrecionFINAL")
 x_eu=sol_eulerint[:,0]
 y_eu=sol_eulerint[:,1]
 z_eu=sol_eulerint[:,2]
-
 
 
 delta_odeint = np.sqrt((x_od-x)**2+(y_od-y)**2+(z_od-z)**2)
